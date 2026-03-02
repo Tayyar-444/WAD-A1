@@ -1,0 +1,30 @@
+
+
+
+body {
+  font-family: Arial;
+  background: lightgray;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+#chat {
+  width: 300px;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#messages {
+  min-height: 200px;
+  margin-bottom: 10px;
+}
+
+.message {
+  background: blue;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
