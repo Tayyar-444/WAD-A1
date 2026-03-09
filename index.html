@@ -9,69 +9,28 @@
   <meta charset="UTF-8">
   <title>Chat Interface</title>
   <link rel="stylesheet" href="styles/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="h-screen flex">
+<body class="bg-gray-100 flex justify-center items-center h-screen">
 
+<div class="w-96 bg-white shadow-lg rounded-lg p-4">
 
-  <aside class="w-64 bg-gray-100 p-4 flex flex-col">
+<h2 class="text-lg font-bold mb-4">Chat Interface</h2>
 
-    <button class="bg-blue-500 text-white p-2 rounded mb-4">
-      New Chat
-    </button>
+<div id="chat" class="border h-64 overflow-y-auto mb-3 p-2">
+<p>Hello! How can I help you?</p>
+<p>I want to build a chat interface.</p>
+<p>Great! Let's start.</p>
+</div>
 
-    <div class="space-y-2">
+<textarea class="border w-full p-2 mb-2"></textarea>
 
-      <div class="p-2 bg-gray-300 rounded">
-        Conversation 1
-      </div>
+<button class="bg-blue-500 text-white px-4 py-2 rounded">
+Send
+</button>
 
-      <div class="p-2 hover:bg-gray-200 rounded">
-        Conversation 2
-      </div>
-
-    </div>
-
-  </aside>
-
-
-  <main class="flex-1 flex flex-col">
-
-
-    <div class="flex-1 overflow-y-auto p-4 space-y-4">
-
-      <chat-message role="ai">
-        Hello! How can I help you?
-      </chat-message>
-
-      <chat-message role="user">
-        I want to build a chat interface.
-      </chat-message>
-
-      <chat-message role="ai">
-        Great! Let's start with HTML and Tailwind.
-      </chat-message>
-
-    </div>
-
-
-    <div class="border-t p-4 flex gap-2">
-
-      <textarea
-        class="flex-1 border rounded p-2"
-        placeholder="Type your message...">
-      </textarea>
-
-      <button class="bg-blue-500 text-white px-4 rounded">
-        Send
-      </button>
-
-    </div>
-
-  </main>
-
-  <script type="module" src="src/chat-message.js"></script>
-  <script type="module" src="src/script.js"></script>
+</div>
 
 </body>
 
