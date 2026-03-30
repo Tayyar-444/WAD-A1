@@ -1,39 +1,43 @@
-
-
-
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Chat Interface</title>
-  <link rel="stylesheet" href="styles/style.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<body>
-
-<div class="chat-container">
-
-    <div class="chat-header">
-        Chat Interface
-    </div>
-
-    <div id="chat" class="chat-messages">
-        <div class="message bot">Hello! How can I help you?</div>
-        <div class="message user">I want to build a chat interface.</div>
-        <div class="message bot">Great! Let's start with HTML and Tailwind.</div>
-    </div>
-
-    <div class="chat-input">
-        <textarea placeholder="Type a message..."></textarea>
-        <button>Send</button>
-    </div>
-
-</div>
-
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Campus Chat Studio is a React chat application built with Vite, mock APIs, and OpenRouter support."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              sand: {
+                50: '#fffaf2',
+                100: '#f9ebd2',
+                200: '#efd2a3',
+              },
+              ember: {
+                500: '#de6b48',
+                600: '#bf5739',
+              },
+              lagoon: {
+                700: '#285b62',
+                900: '#11343b',
+              },
+            },
+            boxShadow: {
+              panel: '0 32px 80px -42px rgba(17, 52, 59, 0.45)',
+            },
+          },
+        },
+      }
+    </script>
+    <title>Campus Chat Studio</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
-
