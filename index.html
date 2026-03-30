@@ -12,23 +12,24 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-100 flex justify-center items-center h-screen">
+<body>
 
-<div class="w-96 bg-white shadow-lg rounded-lg p-4">
+<div class="chat-container">
 
-<h2 class="text-lg font-bold mb-4">Chat Interface</h2>
+    <div class="chat-header">
+        Chat Interface
+    </div>
 
-<div id="chat" class="border h-64 overflow-y-auto mb-3 p-2">
-<p>Hello! How can I help you?</p>
-<p>I want to build a chat interface.</p>
-<p>Great! Let's start.</p>
-</div>
+    <div id="chat" class="chat-messages">
+        <div class="message bot">Hello! How can I help you?</div>
+        <div class="message user">I want to build a chat interface.</div>
+        <div class="message bot">Great! Let's start with HTML and Tailwind.</div>
+    </div>
 
-<textarea class="border w-full p-2 mb-2"></textarea>
-
-<button class="bg-blue-500 text-white px-4 py-2 rounded">
-Send
-</button>
+    <div class="chat-input">
+        <textarea placeholder="Type a message..."></textarea>
+        <button>Send</button>
+    </div>
 
 </div>
 
