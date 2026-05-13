@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Simulator Offline</title>
+    <style>
+      :root {
+        color: #163038;
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(249, 235, 210, 0.95),
+            transparent 34%
+          ),
+          linear-gradient(135deg, #f7f1e7 0%, #f1eee5 52%, #edf1ee 100%);
+        font-family: 'Segoe UI', system-ui, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+
+      .card {
+        max-width: 560px;
+        border-radius: 32px;
+        border: 1px solid rgba(17, 52, 59, 0.1);
+        background: rgba(255, 255, 255, 0.82);
+        padding: 40px 32px;
+        box-shadow: 0 30px 80px -50px rgba(17, 52, 59, 0.45);
+        text-align: center;
+        backdrop-filter: blur(14px);
+      }
+
+      .eyebrow {
+        margin: 0;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: rgba(17, 52, 59, 0.7);
+      }
+
+      h1 {
+        margin: 18px 0 0;
+        font-size: 2.4rem;
+        line-height: 1.1;
+      }
+
+      p {
+        margin: 18px 0 0;
+        font-size: 1rem;
+        line-height: 1.8;
+        color: #4a5f66;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="card">
+      <p class="eyebrow">Offline</p>
+      <h1>You are not connected right now.</h1>
+      <p>
+        Chat Simulator can still open its shell while you are offline, but it
+        cannot fetch conversations or stream assistant replies until the
+        internet connection comes back.
+      </p>
+    </section>
+  </body>
+</html>

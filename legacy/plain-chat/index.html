@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plain JavaScript Chat Prototype</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="min-h-screen px-4 py-5 md:px-6">
+    <div
+      class="mx-auto flex min-h-[calc(100vh-2.5rem)] max-w-6xl flex-col overflow-hidden rounded-[2rem] border border-white/60 bg-white/75 shadow-2xl shadow-slate-900/10 backdrop-blur lg:flex-row"
+    >
+      <aside
+        class="w-full border-b border-slate-200 bg-slate-950 text-white lg:max-w-[300px] lg:border-b-0 lg:border-r lg:border-r-white/10"
+      >
+        <div class="flex h-full flex-col gap-5 p-5 md:p-6">
+          <div class="rounded-[1.7rem] border border-white/10 bg-white/5 p-5">
+            <p
+              class="text-xs font-semibold uppercase tracking-[0.3em] text-orange-100/80"
+            >
+              Legacy Build
+            </p>
+            <h1 class="mt-3 text-3xl font-bold leading-tight">
+              Static chat upgraded with streaming
+            </h1>
+            <button
+              type="button"
+              class="mt-5 w-full rounded-2xl bg-orange-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-orange-600"
+            >
+              New Chat
+            </button>
+          </div>
+
+          <div class="rounded-[1.7rem] border border-white/10 bg-white/5 p-4">
+            <p
+              class="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-orange-100/70"
+            >
+              Conversations
+            </p>
+            <div class="space-y-3">
+              <button
+                type="button"
+                class="w-full rounded-[1.4rem] border border-orange-100/60 bg-orange-50 px-4 py-4 text-left text-slate-900"
+              >
+                <span class="block text-sm font-semibold">Course chatbot</span>
+                <span class="mt-2 block text-sm text-slate-600">
+                  Help me plan the first assignment from scratch.
+                </span>
+              </button>
+              <button
+                type="button"
+                class="w-full rounded-[1.4rem] border border-white/10 bg-white/5 px-4 py-4 text-left text-white"
+              >
+                <span class="block text-sm font-semibold">UI ideas</span>
+                <span class="mt-2 block text-sm text-orange-100/70">
+                  Make the layout feel more like a real assistant app.
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <main class="flex min-h-[70vh] flex-1 flex-col bg-white/40">
+        <header
+          class="border-b border-slate-200 bg-white/70 px-4 py-5 backdrop-blur md:px-7"
+        >
+          <p
+            class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500"
+          >
+            Plain JavaScript Version
+          </p>
+          <h2 class="mt-2 text-2xl font-bold text-slate-900">
+            OpenRouter streaming chat
+          </h2>
+          <p class="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
+            This preserved folder covers the early weekly assignments with HTML,
+            CSS, Tailwind, ES modules, and a custom element for messages.
+          </p>
+        </header>
+
+        <section
+          data-message-list
+          class="chat-scroll flex-1 overflow-y-auto px-4 py-6 md:px-7"
+        ></section>
+
+        <form
+          data-chat-form
+          class="border-t border-slate-200 bg-white/80 px-4 py-4 backdrop-blur md:px-7"
+        >
+          <div
+            class="rounded-[1.8rem] border border-slate-200 bg-white p-3 shadow-sm"
+          >
+            <div class="flex flex-col gap-3 md:flex-row md:items-end">
+              <textarea
+                data-chat-input
+                rows="3"
+                placeholder="Type a message and press send..."
+                class="min-h-[96px] flex-1 rounded-[1.4rem] border border-transparent bg-orange-50 px-4 py-3 text-sm leading-7 text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-slate-900/10 focus:bg-white"
+              ></textarea>
+              <button
+                data-send-button
+                type="submit"
+                class="inline-flex h-12 items-center justify-center rounded-2xl bg-slate-950 px-6 text-sm font-semibold text-white transition hover:bg-slate-800"
+              >
+                Send
+              </button>
+            </div>
+          </div>
+          <p class="mt-3 text-xs leading-6 text-slate-500">
+            Enter sends the message. Shift+Enter inserts a new line.
+          </p>
+        </form>
+      </main>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

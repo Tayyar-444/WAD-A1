@@ -1,0 +1,32 @@
+import { ImageResponse } from 'next/og'
+
+export const size = {
+  width: 192,
+  height: 192,
+}
+
+export const contentType = 'image/png'
+
+export default function Icon() {
+  return new ImageResponse(
+    <div
+      style={{
+        background:
+          'linear-gradient(135deg, rgba(17,52,59,1) 0%, rgba(40,91,98,1) 60%, rgba(222,107,72,1) 100%)',
+        color: 'white',
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 42,
+        fontSize: 72,
+        fontWeight: 700,
+        letterSpacing: '-0.08em',
+      }}
+    >
+      CS
+    </div>,
+    size
+  )
+}
